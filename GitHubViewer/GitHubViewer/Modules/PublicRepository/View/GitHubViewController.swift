@@ -13,9 +13,17 @@ import EasyPeasy
 class GitHubViewController: UIViewController {
     
     // MARK: variables
-    private var refreshControl = UIRefreshControl()
+    private lazy var refreshControl: UIRefreshControl = {
+        let view = UIRefreshControl()
+        return view
+    }()
+    
+    private lazy var tableView: UITableView = {
+        let view = UITableView()
+        return view
+    }()
+    
     private var presenter: GitHubPresenter?
-    private var tableView = UITableView()
     
     // MARK: init
     init(presenter: GitHubPresenter) {

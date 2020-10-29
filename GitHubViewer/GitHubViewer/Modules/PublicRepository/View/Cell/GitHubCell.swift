@@ -18,10 +18,22 @@ class GitHubCell: UITableViewCell {
         let view = UIImageView()
         return view
     }()
-    private var idLabel = UILabel()
-    var nameLabel = UILabel()
-    var loginLabel = UILabel()
-    var descriptionLabel = UILabel()
+    private lazy var idLabel: UILabel = {
+        let view = UILabel()
+        return view
+    }()
+    var nameLabel: UILabel = {
+        let view = UILabel()
+        return view
+    }()
+    var loginLabel: UILabel = {
+        let view = UILabel()
+        return view
+    }()
+    var descriptionLabel: UILabel = {
+        let view = UILabel()
+        return view
+    }()
     
     // MARK: init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
